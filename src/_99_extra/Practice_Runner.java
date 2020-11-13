@@ -1,6 +1,10 @@
 package _99_extra;
 
-public class Practice_Runner { public static void main(String[] args) {
+public class Practice_Runner { 
+	
+	static Pig piggy = new Pig("Babe", false);
+	
+	public static void main(String[] args) {
 	
 	Dinosaur dino = new Dinosaur("TRex", true, 1000);
 	
@@ -18,6 +22,30 @@ public class Practice_Runner { public static void main(String[] args) {
 	System.out.println(yum.getMaker());
 	System.out.println(yum.getChocolate());
 	System.out.println(yum.getPrice());
-}
+	
+	//Pig piggy = new Pig("Babe", false);
+	System.out.println(piggy.willBecomeBacon());
+	
+	breakfast();
+	
+	piggy = new Pig("Rasher", true);
+	
+	System.out.println(piggy.willBecomeBacon());
+	
+	breakfast();
+	
+	}
+
+	static void breakfast() {
+		if(piggy.willBecomeBacon() == true) {
+			System.out.println("bacon for breakfast");
+		}
+		
+		else {
+			System.out.println("eggs for breakfast");
+		}
+	}
 
 }
+
+
